@@ -1,3 +1,7 @@
+#Juego Rock, paper and Scissors
+#Permite escoger nickname y el número de partidas para elegir un ganador
+#El usuario escoje su opción mientra la opción del computador se hace de manera aleatoria
+
 import functions
 import sys
 

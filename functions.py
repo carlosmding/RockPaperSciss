@@ -1,9 +1,10 @@
 import random
-
+#Método elige al azar una opción de la tupla recibida como parámetro y la retorna
 def computer_option(options):
   option_choose = random.choice(options)
   return option_choose
 
+#Recibe las opciones de juego del usuario y el computador además de los scores y verifica según las reglas del juego el ganador, actualiza el resultado y devuelve el mensaje y los scores
 def who_wins(opt_user, opt_computer, score_user, score_computer):
   if opt_computer == opt_user:
     message = "Hubo un empate"
@@ -36,7 +37,8 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
         message = "Tijera le gana a Papel >> El Computador ganó"
         score_computer +=1
         return message, score_user, score_computer
-  
+
+#Según los scores define quien es el ganador e imprime en pantalla el mensaje del ganador
 def champion(score_user, score_computer, nickname):
   if score_user == score_computer:
     print("Elegiste cero partidas ganadas. Juego Terminado")
