@@ -37,15 +37,12 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
         score_computer +=1
         return message, score_user, score_computer
   
- 
-"""
-if __name__ == "__main__":
-  opt_computer = computer_option()
-  print("Computer: " + opt_computer)
-  opt_user = computer_option()
-  print("User: " + opt_user)
-  su =0
-  sc =0
-  message = who_wins(opt_user, opt_computer, su, sc)
-  print(message)
-"""  
+def champion(score_user, score_computer, nickname):
+  if score_user == score_computer:
+    print("Elegiste cero partidas ganadas. Juego Terminado")
+  elif score_user>score_computer:
+    print(f"{nickname} has Ganado. !Eres el Mejor¡")
+  else:
+    print("El computador es el ganador. Ánimo puedes lograrlo en el próximo")   
+    
+
