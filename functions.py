@@ -7,11 +7,11 @@ def computer_option(options):
 def who_wins(opt_user, opt_computer, score_user, score_computer):
   if opt_computer == opt_user:
     message = "Hubo un empate"
-    return message
+    return message, score_user, score_computer
   else:
     if opt_computer == "Piedra":
       if opt_user == "Papel":
-        message = "Papel le gana a piedra >> El Usuario ganó"
+        message = "Papel le gana a piedra >> Ganaste"
         score_user +=1
         return message, score_user, score_computer
       else:
@@ -20,7 +20,7 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
         return message, score_user, score_computer
     elif opt_computer == "Papel":
       if opt_user == "Tijera":
-        message = "Tijera le gana a Papel >> El Usuario ganó"
+        message = "Tijera le gana a Papel >> Ganaste"
         score_user +=1
         return message, score_user, score_computer
       else:
@@ -29,7 +29,7 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
         return message, score_user, score_computer
     else:
       if opt_user == "Piedra":
-        message = "Piedra le gana a Tijera >> El Usuario ganó"
+        message = "Piedra le gana a Tijera >> Ganaste"
         score_user +=1
         return message, score_user, score_computer
       else:
@@ -37,6 +37,7 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
         score_computer +=1
         return message, score_user, score_computer
   
+ 
 """
 if __name__ == "__main__":
   opt_computer = computer_option()
