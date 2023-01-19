@@ -1,7 +1,6 @@
 import random
 
-def computer_option():
-  options = ("Piedra", "Papel", "Tijera")
+def computer_option(options):
   option_choose = random.choice(options)
   return option_choose
 
@@ -14,31 +13,31 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
       if opt_user == "Papel":
         message = "Papel le gana a piedra >> El Usuario ganó"
         score_user +=1
-        return message
+        return message, score_user, score_computer
       else:
         message = "Piedra le gana a Tijera >> El Computador ganó"
         score_computer +=1
-        return message
+        return message, score_user, score_computer
     elif opt_computer == "Papel":
       if opt_user == "Tijera":
         message = "Tijera le gana a Papel >> El Usuario ganó"
         score_user +=1
-        return message
+        return message, score_user, score_computer
       else:
         message = "Papel le gana a Piedra >> El Computador ganó"
         score_computer +=1
-        return message
+        return message, score_user, score_computer
     else:
       if opt_user == "Piedra":
         message = "Piedra le gana a Tijera >> El Usuario ganó"
         score_user +=1
-        return message
+        return message, score_user, score_computer
       else:
         message = "Tijera le gana a Papel >> El Computador ganó"
         score_computer +=1
-        return message
+        return message, score_user, score_computer
   
-  
+"""
 if __name__ == "__main__":
   opt_computer = computer_option()
   print("Computer: " + opt_computer)
@@ -48,4 +47,4 @@ if __name__ == "__main__":
   sc =0
   message = who_wins(opt_user, opt_computer, su, sc)
   print(message)
-  
+"""  
