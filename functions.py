@@ -17,12 +17,35 @@ def who_wins(opt_user, opt_computer, score_user, score_computer):
         return message
       else:
         message = "Piedra le gana a Tijera >> El Computador ganó"
-        score_user +=1
+        score_computer +=1
         return message
     elif opt_computer == "Papel":
-      if opt_user == "Papel":
-        
+      if opt_user == "Tijera":
+        message = "Tijera le gana a Papel >> El Usuario ganó"
+        score_user +=1
+        return message
+      else:
+        message = "Papel le gana a Piedra >> El Computador ganó"
+        score_computer +=1
+        return message
+    else:
+      if opt_user == "Piedra":
+        message = "Piedra le gana a Tijera >> El Usuario ganó"
+        score_user +=1
+        return message
+      else:
+        message = "Tijera le gana a Papel >> El Computador ganó"
+        score_computer +=1
+        return message
+  
   
 if __name__ == "__main__":
-  opt = computer_option()
-  print(opt)
+  opt_computer = computer_option()
+  print("Computer: " + opt_computer)
+  opt_user = computer_option()
+  print("User: " + opt_user)
+  su =0
+  sc =0
+  message = who_wins(opt_user, opt_computer, su, sc)
+  print(message)
+  
