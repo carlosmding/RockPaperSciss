@@ -35,6 +35,6 @@ else:
       print("Intentelo de nuevo")
       continue
 
-  print(f"\nFinalmente luego de {round} rounds ...")
+  print(f"\nFinalmente luego de {round -1} rounds ...")
   functions.champion(score_user, score_computer, nickname)
   
